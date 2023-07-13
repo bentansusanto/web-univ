@@ -1,3 +1,4 @@
+import Footer from './components/Footer'
 import Homepage from './components/Homepage'
 import Navbar from './components/Navbar'
 import NotFound from './components/NotFound'
@@ -12,6 +13,7 @@ function App() {
         <Route path='/' element={<Homepage/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
+      <Footer/>
     </Router>
   )
 }

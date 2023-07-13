@@ -6,16 +6,16 @@ import {BsArrowRight} from 'react-icons/bs'
 
 const AboutSection = ({isMobile}) => {
   return (
-    <div className={`${isMobile? "grid-cols-1 mx-3 " : "grid-cols-3 mx-52"} grid -mt-10`}>    
+    <div className={`${isMobile? "grid-cols-1 mx-3 " : "grid-cols-3 mx-52"} grid -mt-10 shadow-md`}>    
             {
                 dataAbout.map((list, idx) => (
                     <div key={idx} className="bg-white">
-                        <div className="bg-yellow-500 flex items-center space-x-8 p-5">
+                        <div className="bg-yellow-300 flex items-center space-x-8 p-5">
                             <img src={list.icon} alt={list.icon}/>
-                            <div className="space-y-2">
+                            <div className="space-y-3">
                                 <h4 className="text-xl font-semibold">{list.title}</h4>
                                 <div className="flex items-center space-x-2">
-                                <Link to={list.link}>Selengkapnya</Link>    
+                                <Link to={list.link} className="text-sm">Selengkapnya</Link>    
                                    <BsArrowRight className="text-xl"/> 
                                 </div>
                             </div>
